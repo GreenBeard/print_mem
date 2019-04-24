@@ -1,0 +1,20 @@
+This program prints the memory at a user specified physical address. It only
+prints a single byte a time, however, this could easily be changed by modifying
+the function to handle data the crossed page boundaries, and larger chunks of
+memory. I was inspired by the question of a friend on how to print memory. At
+first I thought of just printing a char* address with a program using sudo. I
+quickly before even finishing this though that virtual memory is used on all
+modern operating systems. It was an interesting learning experience to make
+this simple program.
+
+I am also aware that having what is effectively a unit test in the main() is
+poor form. However, this project is not large enough to deserve the necessary
+overhead of setting up proper unit tests.
+
+WARNING: THIS PROGRAM WILL NOT RUN WITHOUT A KERNEL MODIFICATION ON RECENT
+VERSIONS OF LINUX. An already existant modification that can be found at
+https://github.com/ozgunawesome/devmem-full-access although it is a very
+simple modification that can be installed at runtime with the insmod command.
+
+Additionally, it should hopefully go without saying this program requires sudo,
+or root access in order to function properly.
